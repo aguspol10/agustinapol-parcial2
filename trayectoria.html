@@ -2,27 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Rafael Lozano-Hemmer - Trayectoria</title>
+    <title>Trayectoria</title>
 
-    <!-- Fuente Barlow que pide la consigna -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <!-- Contenedor gral-->
     <div class="bloque-contenedor">
 
-        <!-- Encabezado (el mismo en todas las paginas) -->
         <header class="encabezado">
-            <h1 class="titulos">Rafael Lozano-Hemmer</h1>
-            <h2 class="titulos">Interactividad, espacio público y arte tecnológico</h2>
+            <h1>Rafael Lozano-Hemmer</h1>
+            <h2>Interactividad, espacio público y arte tecnológico</h2>
         </header>
 
-        <!-- Menu de navegacion (el mismo en todas las paginas) -->
         <nav class="menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -31,10 +27,8 @@
             </ul>
         </nav>
 
-        <!-- Contenedor gral con 2 columnas -->
         <main class="contenedor-gral-trayectoria">
-            
-            <!-- Columna 1 / mas ancha-->
+
             <section class="columna-ancha">
                 <article>
                     <h3 class="subtitulo">Trayectoria y proyección internacional</h3>
@@ -50,23 +44,20 @@
                 </article>
             </section>
 
-            <!-- Columna 2 / mas angosta -->
             <aside class="columna-angosta">
                 <section class="componente-curioso">
                     <h3 class="subtitulo">Datos Curiosos</h3>
-                    
-                    <!-- Contenedor dinámico controlado por JavaScript -->
+
                     <div class="contenedor-dato">
-                        <p id="txt-curioso">Hacé clic en el botón para descubrir un dato interesante sobre el artista.</p>
+                        <p id="txt-curioso"><strong>Hacé clic en el botón para descubrir un dato interesante sobre el artista.</strong></p>
                     </div>
-                    
-                    <button id="btn-curioso" class="titulos">Mostrar dato al azar</button>
+
+                    <button id="btn-curioso">Mostrar dato al azar</button>
                 </section>
             </aside>
 
         </main>
 
-        <!-- Footer (el mismo en las 3 paginas) -->
         <footer class="pie-principal">
             <p>Para contactarse escribir a: <a href="mailto:rafael@artedigital.com">rafael@artedigital.com</a></p>
             <p class="nota-legal">Nota: Los textos fueron generados por ChatGPT y adaptados a la consigna. Pueden contener errores. Las imágenes fueron recopiladas de Internet únicamente para su uso en este parcial.</p>
@@ -74,7 +65,6 @@
 
     </div>
 
-    <!-- Script de js para esta página -->
     <script src="js/datos-curiosos.js"></script>
 </body>
 </html>

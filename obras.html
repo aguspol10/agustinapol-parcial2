@@ -2,27 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Rafael Lozano-Hemmer - Obras</title>
+    <title>Obras</title>
 
     <!-- Fuente Barlow que pide la consigna -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <!-- Contenedor gral -->
     <div class="bloque-contenedor">
 
-        <!-- Encabezado (el mismo en todas las paginas) -->
         <header class="encabezado">
-            <h1 class="titulos">Rafael Lozano-Hemmer</h1>
-            <h2 class="titulos">Interactividad, espacio público y arte tecnológico</h2>
+            <h1>Rafael Lozano-Hemmer</h1>
+            <h2>Interactividad, espacio público y arte tecnológico</h2>
         </header>
 
-        <!-- Menu de navegacion (el mismo en todas las paginas) -->
         <nav class="menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -31,77 +28,72 @@
             </ul>
         </nav>
 
-    
         <main class="contenido-obras">
-            
-            <!--Intro-->
+
             <section class="introduccion-tecnologica">
                 <h3 class="subtitulo">Sistemas interactivos y tecnología en tiempo real</h3>
                 <p>El trabajo de Rafael Lozano-Hemmer se basa en el desarrollo de sistemas tecnológicos que reaccionan a la presencia humana. Utiliza dispositivos como cámaras, micrófonos y sensores biométricos para captar información del entorno y transformarla en respuestas visuales o sonoras.</p>
                 <p>Estas obras funcionan en tiempo real, generando una relación directa entre acción y resultado. El público no solo observa, sino que influye activamente en el comportamiento de la obra, creando experiencias personalizadas y colectivas al mismo tiempo.</p>
             </section>
 
-            <!--Instrucciones para el ejercicio interactivo-->
             <section class="bloque-instrucciones">
-                <p><strong>Instrucciones de interacción:</strong> Abajo encontrarás una galería generada dinámicamente con las obras clave del artista. Podés utilizar el siguiente botón para alternar el diseño visual de la galería, modificando los esquemas de color y tamaño de los elementos en tiempo real.</p>
-                
-                <button id="btn-cambiar-diseno" class="titulos">Cambiar diseño de la galería</button>
+                <p><strong>Instrucciones de interacción:</strong> Abajo encontrarás una galería generada dinámicamente con las obras clave del artista. Podés utilizar el siguiente botón para alternar el diseño visual de la galería.</p>
+                <button id="btn-cambiar-diseno">Cambiar diseño de la galería</button>
             </section>
 
-            <!-- Contenedor galeria /en JS se rellena con las imagenes-->
             <section id="contenedor-galeria" class="galeria-estilo-original">
             </section>
+            <br>
             <hr>
 
-            <!-- EJERCICIO -->
+            <!-- Ejercicio-->
             <section class="ejercicio-luces">
                 <h3 class="subtitulo">Sistema de Control de Luces Móviles</h3>
-                
-                <!--Formulario -->
+
+                <!-- Formulario -->
                 <div id="paso-inicial">
                     <label for="cant-obras">Cantidad de obras a registrar:</label>
                     <input type="number" id="cant-obras" min="1" placeholder="Ej: 3">
-                    
+
                     <label for="consumo-luz">Consumo por hora de cada luz (kWh):</label>
                     <input type="number" id="consumo-luz" min="0" step="0.1" placeholder="Ej: 0.25">
-                    
+
                     <label for="costo-kwh">Costo por kWh ($):</label>
                     <input type="number" id="costo-kwh" min="0" step="0.1" placeholder="Ej: 45.5">
-                    
-                    <button id="configurar" class="titulos">Iniciar Carga</button>
+
+                    <button id="configurar">Iniciar Carga</button>
                 </div>
 
-                <!--Carga de obras, oculto al principio-->
+                <!-- Formulario -->
                 <div id="paso-carga" class="oculto">
-                    <h4 class="titulos">Registro de Obra <span id="num-obra-actual">1</span> de <span id="total-obras-carga">0</span></h4>
+                    <h4>Registro de Obra <span id="num-obra-actual">1</span> de <span id="total-obras-carga">0</span></h4>
                     <form id="form-obra">
                         <label for="nombre-obra">Nombre de la obra:</label>
                         <input type="text" id="nombre-obra" placeholder="Ej: Pulse Room">
-                        
+
                         <label for="luces-obra">Cantidad de luces móviles:</label>
                         <input type="number" id="luces-obra" min="1" placeholder="Ej: 24">
-                        
+
                         <label for="horas-obra">Tiempo de funcionamiento diario (horas):</label>
                         <input type="number" id="horas-obra" min="1" max="24" step="0.5" placeholder="Ej: 8">
-                        
-                        <button type="button" id="guardar-obra" class="titulos">Guardar Obra</button>
+
+                        <button type="button" id="guardar-obra">Guardar Obra</button>
                     </form>
                 </div>
 
                 <!-- Resultados -->
                 <div id="resultados" class="oculto">
-                    <h4 class="titulos">Resultados del Análisis</h4>
-                    
+                    <h4>Resultados del Análisis</h4>
+
                     <div id="resultados-texto">
                     </div>
 
-                    <button id="reiniciar" class="titulos">Reiniciar Sistema</button>
+                    <button id="reiniciar">Reiniciar Sistema</button>
                 </div>
             </section>
 
         </main>
 
-        <!-- Footer (el mismo en las 3 paginas) -->
         <footer class="pie-principal">
             <p>Para contactarse escribir a: <a href="mailto:rafael@artedigital.com">rafael@artedigital.com</a></p>
             <p class="nota-legal">Nota: Los textos fueron generados por ChatGPT y adaptados a la consigna. Pueden contener errores. Las imágenes fueron recopiladas de Internet únicamente para su uso en este parcial.</p>
@@ -109,7 +101,6 @@
 
     </div>
 
-    <!-- Script que maneja la galería y el sistema de luces) -->
     <script src="js/galeria.js"></script>
 </body>
 </html>

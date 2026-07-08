@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/fondo.png');
+    background-attachment: fixed;
+    background-repeat: repeat;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, button, .menu a {
+    font-family: 'Barlow', sans-serif;
+}
+
+.bloque-contenedor {
+    max-width: 1200px;
+    width: 90%;
+    margin: 4rem auto;
+    background-color: rgba(20, 20, 20, 0.95);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+
+/* Encabezado (igual en las 3 paginas) */
+.encabezado {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem;
+}
+
+.encabezado h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f3f3f3;
+}
+
+.encabezado h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #aaaaaa;
+    margin-top: 0.5rem;
+}
+
+/* Menu de navegacion con flexbox */
+.menu {
+    margin-bottom: 3rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu a {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+.menu a:hover, .menu a.activo {
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 4px;
+}
+
+/* Cita destacada del index */
+.cita {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-left: 4px solid #ffffff;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.cita cite {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: #888;
+}
+
+.subcolumna {
+    background-color: #181818;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.subtitulo {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #f3f3f3;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.subcolumna p, .columna-ancha p, .introduccion-tecnologica p {
+    margin-bottom: 1rem;
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+
+.contenedor-gral {
+    display: flex;
+    gap: 2rem;
+}
+
+.contenedor-gral > .subcolumna {
+    width: 33%;
+}
+
+.bloque-derecho-index {
+    width: 66%; 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.filas-columnas {
+    display: flex;
+    gap: 2rem;
+}
+
+.contenedor-imagen-artista img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.contenedor-gral-trayectoria {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.columna-ancha {
+    width: 65%;
+}
+
+.columna-ancha article {
+    margin-bottom: 2.5rem;
+}
+
+.columna-angosta {
+    width: 30%;
+}
+
+.componente-curioso {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.contenedor-dato {
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* botones */
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #cccccc;
+}
+
+/* GALERIA INTERACTIVA */
+.bloque-instrucciones {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 2rem 0;
+}
+
+.bloque-instrucciones p {
+    margin-bottom: 1rem;
+}
+
+#contenedor-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* diseño 1 */
+.galeria-estilo-original .tarjeta-obra {
+    background-color: #151515;
+    border: 1px solid #282828;
+    width: calc(33.333% - 1.34rem);
+    padding: 1.2rem;
+    border-radius: 6px;
+}
+
+.galeria-estilo-original .tarjeta-obra img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.galeria-estilo-original .tarjeta-obra p {
+    color: #888888;
+}
+
+/* 2do diseño*/
+.galeria-estilo-alternativo .tarjeta-obra {
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #000000;
+    width: calc(50% - 1rem);
+    padding: 1.8rem;
+}
+
+.galeria-estilo-alternativo .tarjeta-obra img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 1.2rem;
+}
+
+.galeria-estilo-alternativo .tarjeta-obra p {
+    color: #444444;
+    font-weight: 600;
+}
+
+.tarjeta-obra h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+
+.tarjeta-obra p {
+    font-size: 0.95rem;
+}
+
+/* Ejercicio*/
+.ejercicio-luces {
+    background-color: #111111;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.ejercicio-luces label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.ejercicio-luces input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #222;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.ejercicio-luces button {
+    margin-top: 1rem;
+}
+
+#resultados-texto {
+    background-color: #161616;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #ffffff;
+}
+
+#resultados-texto ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+}
+
+/* ocultar bloques*/
+.oculto {
+    display: none;
+}
+
+
+.pie-principal {
+    margin-top: 4rem;
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.pie-principal a {
+    color: #aaa;
+}
+
+.nota-legal {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+}
